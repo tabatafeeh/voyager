@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <title>Voyager</title>
 </head>
 <body>
@@ -14,18 +15,45 @@
                 <img src="img/logo.png" alt="Logo do site">
                 <img class="nome" src="img/logoNome.png" alt="">
             </div>
-            <div class="items"></div>
+            <div class="items">
+                <ul>
+                    <li><button>LOG-IN</button></li>
+                    <li class="menu-items"><a href="">HOME</a></li>
+                    <li class="menu-items"><a href="">HOME</a></li>
+                    <li class="menu-items"><a href="">ABOUT</a></li>
+                    <li class="menu-items"><a href="">HOME</a></li>
+                </ul>
+            </div>
         </div>
     </header>
-    <div class="content">
+    
+    <div class="content" id="particles-js">
         <div class="infos">
-            <h1>Something will be here!</h1>
-            <button>GET STARTED</button>
+            <h1>Something will be here!</h1>            
+            <button onclick="location.href='#about'">GET STARTED</button>
         </div>
-
-        <div class="about">
+        
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+        
+        <div id="about">
             
         </div>
     </div>
+
+    <!-- animacao para simular digitacao -->
+    <script>
+        function writer(element) {
+            const text = element.innerHTML.split('');
+            element.innerHTML = '';
+            text.forEach((letter, i) => {
+                setTimeout(() => element.innerHTML += letter, 100 * i)
+            });
+        }
+
+        const title = document.querySelector('h1');
+        writer(title);
+    </script>
+
 </body>
 </html>

@@ -1,10 +1,22 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 header {
     width: 100vw;
@@ -12,38 +24,83 @@ header {
     background-color: #020314;
     border-bottom: solid 1px #12D6D6;
     position: fixed;
-
+    z-index: 1;
 }
 
 .nav {
     padding: 13px 28px;
 }
 
+.nav .items {
+    margin-top: -37px;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.nav .items ul li {
+    list-style: none;
+    color: darkgray;
+    float: right;
+    font-size: 18px;
+    padding: 0px 35px;
+}
+
+.nav .items ul .menu-items:hover {
+    border-bottom: solid 5px #12D6D6;
+    padding-bottom: 20px;
+}
+
+
+.nav .items button {
+    width: 86px;
+    height: 32px;
+    background-color: #C3505C;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: -8px;
+}
+
 .nome {
     margin-bottom: 6px;
 }
+
 
 .content {
     background: url(../img/fundo1.png);
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
 }
 
+#particles-js {
+    /* width: 100%; */
+    height: 100%;
+}
 .content .infos {
     width: 400px;
+    height: 300px;
     color: white;
+    position: absolute;
     /* padding: 200px 500px; */
-    padding-top: 220px;
-    padding-left: 550px;
+    margin-top: 220px;
+    margin-left: 550px;
     text-align: center;
     margin-bottom: 240px;
 }
 
 .content .infos h1 {
     font-size: 55px;
+    height: 150px;
+}
+
+.content .infos h1::after{
+    content: '|';
+    opacity: 1;
+    animation: animation-home .9s infinite;
+    /* z-index: 0; */
 }
 
 .content .infos button {
@@ -62,7 +119,17 @@ button:hover {
     cursor: pointer;
 }
 
-.about {
-    height: 98vh;
+#about {
+    height: 100vh;
     background-color: #020314;
+}
+
+/* animacao barra piscando */
+@keyframes animation-home {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
