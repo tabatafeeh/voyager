@@ -20,7 +20,7 @@ a {
 
 header {
     width: 100vw;
-    height: 76px;
+    height: 70px;
     background-color: #020314;
     border-bottom: solid 1px #12D6D6;
     position: fixed;
@@ -28,7 +28,7 @@ header {
 }
 
 .nav {
-    padding: 10px 28px;
+    padding: 8px 28px;
 }
 
 .nav .items {
@@ -41,7 +41,7 @@ header {
     list-style: none;
     color: darkgray;
     float: right;
-    font-size: 18px;
+    font-size: 16px;
     padding: 0px 35px;
 }
 
@@ -59,7 +59,7 @@ header {
     font-weight: bold;
     border: none;
     margin-top: -8px;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
 }
 
 .nome {
@@ -73,7 +73,7 @@ header {
     background-attachment: fixed;
     /* background-repeat: no-repeat; */
     width: 100vw;
-    height: 110vh;
+    height: 100%;
 }
 
 #particles-js {
@@ -81,19 +81,19 @@ header {
     height: 100%;
 }
 .content .infos {
-    width: 400px;
+    width: 435px;
     height: 300px;
     color: white;
     position: absolute;
     /* padding: 200px 500px; */
     margin-top: 220px;
-    margin-left: 550px;
+    margin-left: 470px;
     text-align: center;
-    margin-bottom: 240px;
+    /* word-spacing: 10px; */
 }
 
 .content .infos h1 {
-    font-size: 55px;
+    font-size: 54px;
     height: 150px;
 }
 
@@ -105,25 +105,45 @@ header {
 }
 
 .content .infos button {
-    width: 300px;
-    height: 65px;
-    margin-top: 25px;
+    width: 290px;
+    height: 60px;
+    margin-top: 35px;
     border-radius: 100px;
     border: none;
     color: white;
     background-color: #C3505C;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: #9648b4!important;
+    transition: all 1s;
 }
 
 #about {
-    height: 100vh;
+    height: 90vh;
     background-color: #020314;
     border-top: 1px #12D6D6;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 72%;
+    height: 400px;
+    /* background-color: #12D6D6; */
+    margin: auto;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    background-color: white;
+    float: left;
+    margin: 35px;
+    border-radius: 15px;
 }
 
 /* animacao barra piscando */
