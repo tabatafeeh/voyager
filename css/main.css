@@ -138,13 +138,102 @@ button:hover {
 }
 
 .card {
+    /* position: absolute; */
     width: 250px;
-    height: 350px;
+    height: 300px;
     background-color: white;
     float: left;
     margin: 35px;
     border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
+
+.card.is-flipped {
+    /* transform: scale(1.05, 1.05); */
+    transform: rotateY(180deg);
+    background-color: #9648b4;
+}
+
+.card-content {
+    /* position: absolute; */
+    width: 85%;
+    height: 85%;
+    background-color: #fff;
+    margin: 20px auto;
+    backface-visibility: hidden;
+}
+
+.card-content p {
+    text-align: center;
+    color: #9648b4;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card .card-content img {
+    width: 104px;
+    margin: 20px 56px;
+}
+
+#news {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80vh;
+    /* background-color: #12D6D6; */
+    background-color: #310073;
+    background-image: url(img/fundo1.png);
+    background-size: cover;
+    padding-top: 50px;
+    /* padding-left: 20px; */
+}
+
+#news .new {
+    width: 495px;
+    height: 130px;
+    background-color: #fff;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#news .news-left {
+    margin-left: 100px;
+}
+
+#news .news-left .image {
+    width: 28%;
+    height: 100%;
+    background-color: #12D6D6;
+}
+
+#news .news-left .image img {
+    width: 100%;
+    height: 100%;
+}
+
+#news .news-right {
+    margin-left: 50px;
+}
+
+#news .news-right .image {
+    width: 28%;
+    height: 100%;
+    background-color: #12D6D6;
+}
+
+#news .news-right .image img {
+    width: 100%;
+    height: 100%;
+}
+
+#contact {
+    width: 100%;
+    height: 100vh;
+}
+
+
 
 /* animacao barra piscando */
 @keyframes animation-home {
