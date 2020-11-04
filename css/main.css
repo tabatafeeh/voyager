@@ -181,17 +181,17 @@ button:hover {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 80vh;
+    height: 75vh;
     /* background-color: #12D6D6; */
     background-color: #310073;
     background-image: url(img/fundo1.png);
     background-size: cover;
-    padding-top: 50px;
+    padding-top: 100px;
     /* padding-left: 20px; */
 }
 
 #news .new {
-    width: 495px;
+    width: 520px;
     height: 130px;
     background-color: #fff;
     margin: 20px;
@@ -226,6 +226,26 @@ button:hover {
 #news .news-right .image img {
     width: 100%;
     height: 100%;
+}
+
+#news .new .text-new {
+    float: right;
+    margin: -115px 10px;
+    /* background-color: #C3505C; */
+    width: 68%;
+}
+
+#news .new .text-new p {
+    font-size: 27px;
+    font-family: roboto;
+    margin-left: 7px;
+}
+
+#news .new .link-nasa {
+    background-color: rgb(177, 177, 177);
+    position: absolute;
+    padding: 4px 10px;
+    margin: -29px 438px;
 }
 
 #contact {
