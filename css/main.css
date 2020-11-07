@@ -7,11 +7,20 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* overflow-y: ; */
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 5px;
+    background-color: #020314;
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: #0abdc6;
+    border-radius: 15px;
+}
+
 
 a {
     color: inherit;
