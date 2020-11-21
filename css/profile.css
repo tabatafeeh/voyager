@@ -23,31 +23,68 @@ body {
 ul {
   color: #E032E6;
   list-style: none;
-  margin: 20px 105px;
+  margin: 20px 85px;
+  animation: aparecer linear .8s;
+  width: 80%;
   /* font-size: 15px; */
 }
 
 ul li {
   margin-top: 10px;
+  
 }
 
+/* elemento que eu quera que aconteça a animação */
 #left-menu {
   width: 20%;
   height: 100vh;
   background-color: #020314;
-  position: absolute  ;
+  position: absolute;
   top: 0;
   position: fixed;
   /* background-image: url(../img/fundo1.png); */
+  /* chamando a animação */
+  animation: diminui linear .5s;
 }
 
-.profile-img {
-  width: 55%;
+/* "configs" da animação. Pode colocar qualquer valor (0%, 15%, 100%) 
+de acordo com o tempo que voce quer que ocorra o que voce configurou para
+ocorrer.  */
+@keyframes diminui {
+  0% {
+    width: 100%;
+    z-index: 1000;
+  }
+  50% {
+    width: 60%;
+    z-index: 1000;
+  }
+}
+
+#left-menu p {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+#profileImg {
+  width: 150px;
   border-radius: 100%;
   margin: 20px 55px;
+  animation: aparecer linear .8s;
 }
 
-#particles-js {
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+#gallery {
   height: 100vh;
   /* background-color: #020314; */
   /* background-color: #310073; */
@@ -57,7 +94,7 @@ ul li {
   background-image: url(../img/fundo1.png);
 }
 
-#particles-js .content {
+#gallery .content {
   width: 89%;
   /* padding: 20px 50px; */
   position: relative;
@@ -65,9 +102,27 @@ ul li {
   margin-top: 30px;
 }
 
-#particles-js .content img {
+#gallery .content .images {
   width: 250px;
+  height: 150px;
   position: relative;
   margin: 14px;
-  border: 1px solid #12d6d625;
+  border: 2px solid #12d6d625;
+}
+
+#gallery .content .more {
+  width: 90px;
+    height: 90px;
+    margin: 15px;
+    position: fixed;
+    bottom: 13px;
+    right: 13px;
+    background-color: #B332E6;
+    border-radius: 20px;
+  /* background-color: #E032E6; */
+}
+
+.more img {
+  width: 30px;
+
 }

@@ -144,10 +144,11 @@ button:hover {
     height: 400px;
     /* background-color: #12D6D6; */
     margin: auto;
+    /* perspective: 900px; */
 }
 
 .card {
-    /* position: absolute; */
+    position: relative;
     width: 250px;
     height: 300px;
     background-color: white;
@@ -157,6 +158,8 @@ button:hover {
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     cursor: pointer;
+    
+    
 }
 
 .card.is-flipped {
@@ -169,17 +172,38 @@ button:hover {
     /* position: absolute; */
     width: 85%;
     height: 85%;
+    
+}
+
+.card-front {
     background-color: #fff;
     margin: 20px auto;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.card-content p {
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-content .card-front p {
     text-align: center;
     color: #9648b4;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* 
+.card .card-content .card-back p {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
 
 .card .card-content img {
     width: 104px;
