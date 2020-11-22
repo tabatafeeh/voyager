@@ -115,13 +115,77 @@ ocorrer.  */
   margin-top: 30px;
 }
 
+#gallery .content .item {
+  position: relative;
+  float: left;
+  width: 250px;
+  height: 150px;
+  margin: 14px;
+}
+
 #gallery .content .images {
   width: 250px;
   height: 150px;
   position: relative;
-  margin: 14px;
+  /* margin: 14px; */
   border: 2px solid #12d6d625;
   object-fit: cover;
+  cursor: pointer;
+}
+
+#gallery .content .item:hover img {
+  position: relative;
+}
+
+#gallery .content .item .btns {
+  display: none;
+}
+
+#gallery .content .item:hover .btns {
+  width: 250px;
+  height: 150px;
+  background-color: rgba(43, 43, 43, 0.664);
+  display: block;
+  position: absolute;
+  margin-top: -156px;
+  margin-left: 2px;
+  display: block;
+}
+
+#gallery .content .item .btns .heart {
+  width: 40px;
+  margin: 53px 34px;
+  cursor: pointer;
+}
+
+/* filtro vermelho */
+#gallery .content .item .btns .heart:hover {
+  -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+
+#gallery .content .item .btns .share {
+  width: 40px;
+  margin: 53px -9px;
+  cursor: pointer;
+}
+
+/* filtro azul */
+#gallery .content .item .btns .share:hover {
+  -webkit-filter: grayscale(100%) brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%) contrast(0.8);
+  filter: grayscale(100%) brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%) contrast(0.8);
+}
+
+#gallery .content .item .btns .download {
+  width: 40px;
+  margin: 55px 32px;
+  cursor: pointer;
+}
+
+/* filtro preto */
+#gallery .content .item .btns .download:hover {
+  -webkit-filter: invert(30%) grayscale(100%) brightness(100%) contrast(4);
+  filter: invert(30%) grayscale(100%) brightness(40%) contrast(4);
 }
 
 #gallery .content .more {
