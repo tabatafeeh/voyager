@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -34,6 +35,11 @@ ul li {
   
 }
 
+li a {
+  text-decoration: none;
+  color: #E032E6;
+}
+
 /* elemento que eu quera que aconteça a animação */
 #left-menu {
   width: 20%;
@@ -59,6 +65,12 @@ ocorrer.  */
     width: 60%;
     z-index: 1000;
   }
+  70% {
+    z-index: 1000;
+  }
+  90% {
+    z-index: 1000;
+  }
 }
 
 #left-menu p {
@@ -66,6 +78,7 @@ ocorrer.  */
   text-align: center;
   font-weight: bold;
   font-size: 23px;
+  animation: aparecer linear .8s;
 }
 
 #profileImg {
@@ -108,6 +121,7 @@ ocorrer.  */
   position: relative;
   margin: 14px;
   border: 2px solid #12d6d625;
+  object-fit: cover;
 }
 
 #gallery .content .more {
@@ -125,4 +139,95 @@ ocorrer.  */
 .more img {
   width: 30px;
 
+}
+
+.modal-bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #88888872;
+  position: absolute;
+  z-index: 4000;
+  display: none;
+}
+
+.modal {
+  width: 50%;
+  height: 410px;
+  background-color: #020314;
+  margin: 70px auto;
+  border-radius: 20px;
+  padding: 30px 40px;
+}
+
+.modal img {
+  width: 25px;
+  float: right;
+  cursor: pointer;
+}
+
+.modal .content {
+  width: 100%;
+}
+
+.modal .content h1 {
+  margin-top: -50px;
+  color: #fff;
+  width: 600px;
+  
+}
+
+.modal .content img {
+  width: 550px;
+  margin: -64px -100px 0px -160px;
+  float: left;
+}
+
+.modal .content .suggest {
+  width: 200px;
+  height: 45px;
+  border-radius: 30px;
+  border: none;
+  background-color: #B332E6;
+  color: #020314;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 30px 0px;
+}
+
+.modal .content .suggest:hover {
+  background-color: #B332E6;
+}
+
+#imagem {
+  width: 350px;
+  height: 230px;
+  object-fit: cover;
+  margin-left: 0px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: none;
+  border: 2px solid #12d6d625;
+}
+
+.like {
+  width: 130px;
+  height: 45px;
+  border-radius: 30px;
+  border: none;
+  background-color: #6ff;
+  color: #020314;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin: -75px 24px 0px 0px;
+  float: right;
+}
+
+#gifzin {
+  width: 250px;
+  margin: 20px -20px 30px 0px;
+  /* margin-left: 80px; */
+  /* margin-bottom: 10px; */
+  display: none;
 }
