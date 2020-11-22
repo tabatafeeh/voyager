@@ -9,48 +9,124 @@
   <title>Profile</title>
 </head>
 <body>
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <img src="img/close.svg" alt="" onclick="fecharModal()">
+      <div class="content">
+        <img src="img/astronaut.gif" alt="">
+        <br><br><br><br>
+        <h1 id="text">Don't know what image you want to download?</h1>
+        <br>
+        <!-- <h3>I will help you</h3> -->
+        <img src="" id="imagem">
+        <img id="gifzin" src="https://media.giphy.com/media/TGKn4dC1ZD6EMwE21o/giphy.gif" alt="">
+        <button class="suggest" id="sugere" onclick="sugerir()">SUGGEST ME AN IMAGE</button>
+        <button class="suggest" id="other" onclick="sugerir()" style="display: none">I WANT ANOTHER</button>
+        <button class="like" id="like" onclick="liked()" style="display: none">I LIKE IT</button>
+      </div>
+    </div>
+  </div>
   <div id="left-menu">
-    <img src="https://thumbs.dreamstime.com/b/%C3%ADcone-executivo-novo-do-perfil-da-mulher-81933323.jpg" alt="" id="profileImg" style="display: none;">
-    <p>Tabata Fernanda</p>
+    <img src="https://user-images.githubusercontent.com/49129260/99889036-66d1a600-2c30-11eb-8115-cf5e8b36e30e.png" alt="" id="profileImg" style="display: none;">
+    <p id="nome" style="display: none;">Fulano de Tal</p>
     <br>
     <ul style="display: none;" id="list">
-      <li>GALLERY</li>
-      <li>SUGGEST ME </li>
-      <li>FAVORITES</li>
-      <li>SETTINGS</li>
-      <li>CONTACT US</li>
+      <li><a href="#"> GALLERY</a></li>
+      <li><a href="#suggest" onclick="abreModal()">SUGGEST ME</a></li>
+      <li><a href="#">FAVORITES</a></li>
+      <li><a href="#">SETTINGS</a></li>
     </ul>
   </div>
   
   <div id="gallery">
     <div class="content">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/potw2044a.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
-      <img class="images" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss064e002872.jpg" alt="">
+      <img class="images" src="img/gallery/0.jpg" alt="">
+      <img class="images" src="img/gallery/1.jpg" alt="">
+      <img class="images" src="img/gallery/2.jpg" alt="">
+      <img class="images" src="img/gallery/3.jpg" alt="">
+      <img class="images" src="img/gallery/4.jpg" alt="">
+      <img class="images" src="img/gallery/5.jpg" alt="">
+      <img class="images" src="img/gallery/6.jpg" alt="">
+      <img class="images" src="img/gallery/7.jpg" alt="">
+      <img class="images" src="img/gallery/8.jpg" alt="">
+      <img class="images" src="img/gallery/9.jpg" alt="">
+      <img class="images" src="img/gallery/10.jpg" alt="">
+      <img class="images" src="img/gallery/11.jpg" alt="">
+      <img class="images" src="img/gallery/12.jpg" alt="">
+      <img class="images" src="img/gallery/13.jpg" alt="">
       <div href="#" class="more">
         <!-- <img src="img/arrow.png" alt=""> -->
       </div>
     </div>  
   </div>
+
   
   <script>
+    // efeito de aparecer os itens do menu
     setTimeout(function() {
       profileImg.style = 'display: block;';
       setTimeout(function() {
-        list.style = 'display: block';
+        nome.style = 'display: block';
+        setTimeout(function() {
+          list.style = 'display: block';
+        }, 300);
+      }, 380);
+    }, 380);
 
-      }, 400);
-    }, 400);
+    // funcao para abrir o modal
+    function abreModal() {
+      modalBg.style.display = 'block';
+    }
+
+    // funcao para fechar o modal
+    function fecharModal() {
+      modalBg.style.display = 'none';
+      imagem.style.display = 'none';  
+      other.style.display = 'none';
+      like.style.display = 'none';
+      sugere.style.display = 'block';
+      text.innerHTML = "Don't know what image you want to download?";
+    }
+
+    function sugerir() {
+      imagem.style.display = 'none';  
+      other.style.display = 'none';
+      like.style.display = 'none';
+      sugere.style.display = 'block';
+      text.innerHTML = "I'm choosing one...";
+      gifzin.style.display = 'block';
+
+      setTimeout(function() {
+        // gera imagem aleatoria
+        var num = Math.trunc(Math.random() * 13);
+        console.log(num);
+        
+        imagem.src = `img/gallery/${num}.jpg`;
+        imagem.style.display = 'block';
+
+        text.style.marginTop = '-30px';
+        text.innerHTML = "What about that?";
+
+        other.style.display = 'block';
+        like.style.display = 'block';
+        sugere.style.display = 'none';
+        gifzin.style.display = 'none';
+
+      }, 2500);
+
+    }
+
+    function liked() {
+
+    }
+
+    // fecha o modal caso a tecla clicada seja ESC
+    document.querySelector('body').addEventListener('keydown', function(event) {
+      if (event.keyCode == 27) {
+        fecharModal();
+      }
+    });
   </script>
+
 </body>
 </html>
