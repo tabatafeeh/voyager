@@ -8,8 +8,8 @@
     <title>Sign in</title>
 </head>
 <body>
-    <div class="container">
-        <div class="esq">
+    <div id="container" class="container" style="display: block;">
+        <div class="esquerda">
             <a href="index.html" class="voltar"><img src="img/arrow.png" alt=""></a>
             <div class="content">
                 <h1>Sign in to Voyager!</h1>
@@ -19,7 +19,7 @@
                 <input type="password" id="" placeholder="Password">
                 <br>
                 <button class="entrar" onclick="entrou()">SIGN IN</button>
-                <button class="cadastrar">SIGN UP</button>
+                <button class="cadastrar" onclick="cadastrar()">SIGN UP</button>
                 <br><br>
                 <div class="linha">
                     <span>or</span>
@@ -36,9 +36,59 @@
         </div>
     </div>
 
+    <div id="containerCadastro" class="container_cadastro" style="display: none;">
+        <div class="direita">
+            <a href="index.html" class="voltar"><img src="img/arrow.png" alt=""></a>
+            <div class="content">
+                <h1>Sign up to Voyager!</h1>
+                <br>
+                <input type="text" id="" placeholder="Name">
+                <br>
+                <input type="text" id="" placeholder="E-mail">
+                <br>
+                <input type="password" id="" placeholder="Password">
+                <br>
+                <button class="entrar" onclick="cadastrou()">SIGN UP</button>
+                <button class="cadastrar" onclick="entrar()">SIGN IN</button>
+                <br><br>
+                <div class="linha">
+                    <span>or</span>
+                </div>
+                <div class="imgs">
+                    <a href="#"><img src="img/fb.png" alt=""></a>
+                    <a href="#"><img src="img/google.png" alt=""></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="esq">
+            <img src="img/planet-gif.gif" alt="">
+        </div>
+
     <script>
         function entrou() {
             window.location.href = 'load.html';
+            
+        }
+
+        function entrar() {
+            container.style.display = 'block';
+            containerCadastro.style.display = 'none';
+
+            
+        }
+
+        
+        function cadastrou() {
+            
+        }
+        
+        function cadastrar() {
+            const cont = document.querySelector('.esquerda');
+
+            container.style.display = 'none';
+            containerCadastro.style.display = 'block';
+            
             
         }
     </script>
