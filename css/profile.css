@@ -190,14 +190,14 @@ ocorrer.  */
 
 #gallery .content .more {
   width: 90px;
-    height: 90px;
-    margin: 15px;
-    position: fixed;
-    bottom: 13px;
-    right: 13px;
-    background-color: #B332E6;
-    border-radius: 20px;
-  /* background-color: #E032E6; */
+  height: 90px;
+  margin: 15px;
+  position: fixed;
+  bottom: 13px;
+  right: 13px;
+  background-color: #B332E6;
+  border-radius: 20px;
+/* background-color: #E032E6; */
 }
 
 .more img {
@@ -226,7 +226,6 @@ ocorrer.  */
 .modal img {
   width: 25px;
   float: right;
-  cursor: pointer;
 }
 
 .modal .content {
@@ -294,4 +293,28 @@ ocorrer.  */
   /* margin-left: 80px; */
   /* margin-bottom: 10px; */
   display: none;
+}
+
+#notificacao {
+  width: 300px;
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.645);
+  margin-left: 620px;
+  border-radius: 10px;
+  position: fixed;
+}
+
+.heart-not {
+  -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+  width: 45px;
+  float: left;
+  margin: 15px 0 0 19px;
+}
+
+#notificacao h1 {
+  float: left;
+  font-size: 25px;
+  margin: 17px;
+  color: #020314;
 }
